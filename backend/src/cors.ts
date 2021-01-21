@@ -1,5 +1,5 @@
 import { RequestHandler } from 'express';
-import { FRONTEND_SERVER_FOR_CORS } from '../constant';
+import { FRONTEND_SERVER_FOR_CORS } from './constants';
 
 export const corsMiddleware: RequestHandler = function (req, res, next) {
   res.header('Access-Control-Allow-Origin', FRONTEND_SERVER_FOR_CORS);

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Pr1sm0/task-management-application/issues"
   },
-  "homepage": "https://github.com/Pr1sm0/task-management-application#readme"
+  "homepage": "https://github.com/Pr1sm0/task-management-application#readme",
+  "dependencies": {
+    "firebase": "^8.2.3"
+  }
 }

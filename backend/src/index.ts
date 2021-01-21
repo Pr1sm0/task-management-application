@@ -1,6 +1,7 @@
 import express from 'express';
-import { PORT } from './constant';
-import { corsMiddleware } from './middleware/cors';
+import { PORT } from './constants';
+import { corsMiddleware } from './cors';
+import './mongoose';
 const app = express();
 
 app.use(corsMiddleware);
