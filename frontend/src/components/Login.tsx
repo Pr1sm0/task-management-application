@@ -1,6 +1,12 @@
 import React from 'react';
 import firebase from 'firebase/app';
+import { useHistory } from 'react-router-dom';
 import 'firebase/auth';
+import { postRequest } from '../services/apiService';
+import { saveUserToStorage } from '../services/sessionStorageService';
+
+const Login: React.FC = () => {
+  const history = useHistory();
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCWAAOKW9mMzFJZRAN1rz8i6K0h0kjN8ME',
@@ -23,13 +29,18 @@ function googleSignin() {
   firebase
     .auth()
     .signInWithPopup(provider)
-    .then((result) => {
-      let user = {
-        name: result.user?.displayName,
-        email: result.user?.email,
+    .then(res => {
+      postRequest('user/emailcheck', res.user?.email);
+      postRequest('user/login', {
+        name: res.user?.displayName,
+        photoUrl: res.user?.photoURL,
+        email: res.user?.email,
         role: 'user',
-      };
-      console.log(user);
+      })
+        .then(res => {
+          saveUserToStorage(res);
+          history.push(`/`);
+        })
     })
     .catch((error) => {
       console.log(error.code);
@@ -50,8 +61,6 @@ function googleSignout() {
       }
     );
 }
-
-const Login: React.FC = () => {
   return (
     <div className="login-wrapper">
       <button onClick={googleSignin}>Google Signin</button>

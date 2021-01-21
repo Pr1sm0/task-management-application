@@ -1,3 +1,5 @@
+import { Document } from 'mongoose';
+
 export namespace DTO {
   export interface IUser {
     name: string;
@@ -5,4 +7,5 @@ export namespace DTO {
     email: string;
     role: string;
   }
+  export interface IUserDoc extends IUser, Document {}
 }
