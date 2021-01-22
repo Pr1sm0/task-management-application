@@ -9,8 +9,9 @@ export class UserRepository {
     return res;
   }
 
-  async checkUserByEmail(email: string): Promise<DTO.IUserDoc | null> {
-    const data = await User.findOne({ email: email });
+  async checkUserByEmail(email: DTO.IEmail): Promise<DTO.IUserDoc | null> {
+    const newEmail = email.email;
+    const data = await User.findOne({ email: newEmail });
     return data;
   }
 }

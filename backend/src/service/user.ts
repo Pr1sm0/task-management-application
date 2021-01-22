@@ -9,7 +9,7 @@ class UserService {
     return data;
   }
 
-  async checkUserByEmail(email: string): Promise<DTO.IUser | null> {
+  async checkUserByEmail(email: DTO.IEmail): Promise<DTO.IUser | null> {
     const data = await this.userRepo.checkUserByEmail(email);
     return data;
   }

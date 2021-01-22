@@ -29,18 +29,23 @@ function googleSignin() {
   firebase
     .auth()
     .signInWithPopup(provider)
-    .then(res => {
-      postRequest('user/emailcheck', res.user?.email);
-      postRequest('user/login', {
-        name: res.user?.displayName,
-        photoUrl: res.user?.photoURL,
-        email: res.user?.email,
-        role: 'user',
-      })
+    .then(async res => {
+      const findUser = await postRequest('user/emailcheck', {email: res.user?.email});
+      if(!findUser){
+        postRequest('user/login', {
+          name: res.user?.displayName,
+          photoUrl: res.user?.photoURL,
+          email: res.user?.email,
+          role: 'user',
+        })
         .then(res => {
           saveUserToStorage(res);
           history.push(`/`);
         })
+      } else {
+        saveUserToStorage(findUser);
+        history.push(`/`);
+      }
     })
     .catch((error) => {
       console.log(error.code);

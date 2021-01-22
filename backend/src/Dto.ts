@@ -7,5 +7,9 @@ export namespace DTO {
     email: string;
     role: string;
   }
+
+  export interface IEmail {
+    email: string;
+  }
   export interface IUserDoc extends IUser, Document {}
 }

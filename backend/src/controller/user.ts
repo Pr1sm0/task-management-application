@@ -18,7 +18,7 @@ router.post('/login', async (req, res) => {
 
 router.post('/emailcheck', async (req, res, next) => {
   try {
-    const user = await userService.checkUserByEmail(req.params.email);
+    const user = await userService.checkUserByEmail(req.body);
     return res.send(user);
   } catch (e) {
     next(e);
