@@ -21,5 +21,5 @@ Setup docker on your machine. From root of the project run `docker-compose up`
 
 # Design
 
-[![](https://img.shields.io/badge/source-figma-yellow?style=flat)](https://www.figma.com/file/O2b8zfwqqVYsJ5obqWvU0L/Task-Management-Application?node-id=4%3A0)
-[![](https://img.shields.io/badge/source-UML_diagrams-blue?style=flat)](https://dbdiagram.io/d/5ff45f5a80d742080a351e3c)
+[![](https://img.shields.io/badge/source-Figma-yellow?style=flat)](https://www.figma.com/file/O2b8zfwqqVYsJ5obqWvU0L/Task-Management-Application?node-id=4%3A0)
+[![](https://img.shields.io/badge/source-DB_diagram-blue?style=flat)](https://dbdiagram.io/d/5ff45f5a80d742080a351e3c)
