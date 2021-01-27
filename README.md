@@ -21,4 +21,4 @@ Setup docker on your machine. From root of the project run `docker-compose up`
 
 # Design
 
-[![](https://img.shields.io/badge/source-figma-blue?style=flat)](https://www.figma.com/file/gAndxaAQxPZ20cYJdKxRuH/Fullstack-Internship)
+[![](https://img.shields.io/badge/source-figma-yellow?style=flat)](https://www.figma.com/file/O2b8zfwqqVYsJ5obqWvU0L/Task-Management-Application?node-id=4%3A0)
