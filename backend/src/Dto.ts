@@ -29,9 +29,17 @@ export namespace DTO {
     boardId: ID;
   }
 
+  export interface IBoard {
+    title: string;
+    createdAt: Date;
+    updatedAt: Date;
+    creatorId: ID;
+  }
+
   export interface IUserDoc extends IUser, Document {}
   export interface ITaskDoc extends ITask, Document {}
   export interface IStatusDoc extends IStatus, Document {}
+  export interface IBoardDoc extends IBoard, Document {}
 
   export enum taskPriorities {
     HIGHEST = 'HIGHEST',
