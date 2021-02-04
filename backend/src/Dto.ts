@@ -1,6 +1,7 @@
-import { Document } from 'mongoose';
+import { Document, Types } from 'mongoose';
 
 export namespace DTO {
+  export type ID = Types.ObjectId;
   export interface IUser {
     name: string;
     photoUrl: string;
@@ -11,5 +12,41 @@ export namespace DTO {
   export interface IEmail {
     email: string;
   }
+
+  export interface ITask {
+    title: string;
+    description: string;
+    priority: taskPriorities;
+    statusId: ID;
+    assigneeId: ID;
+    createdAt: Date;
+    updatedAt: Date;
+    boardId: ID;
+  }
+
+  export interface IStatus {
+    title: string;
+    boardId: ID;
+  }
+
+  export interface IBoard {
+    title: string;
+    createdAt: Date;
+    updatedAt: Date;
+    creatorId: ID;
+  }
+
   export interface IUserDoc extends IUser, Document {}
+  export interface ITaskDoc extends ITask, Document {}
+  export interface IStatusDoc extends IStatus, Document {}
+  export interface IBoardDoc extends IBoard, Document {}
+
+  export enum taskPriorities {
+    HIGHEST = 'HIGHEST',
+    HIGH = 'HIGH',
+    MEDIUM = 'MEDIUM',
+    LOW = 'LOW',
+    LOWEST = 'LOWEST',
+  }
 }
+
