@@ -10,6 +10,11 @@ class BoardService {
     const data = await this.boardRepo.updateStatus(ID, body);
     return data;
   }
+
+  async deleteTask(ID: DTO.ID): Promise<JSON | null> {
+    const data = await this.boardRepo.deleteTask(ID);
+    return data;
+  }
 }
 
 export const boardService = new BoardService(boardRepository);
