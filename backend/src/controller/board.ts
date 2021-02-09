@@ -13,7 +13,7 @@ router.patch('/tasks/:id', async (req, res) => {
     const task = await boardService.updateStatus(ID, body);
     return res.status(201).send(task);
   } catch (e) {
-    return res.status(400).send(e);
+    return res.status(400).send('Bad request!');
   }
 });
 
