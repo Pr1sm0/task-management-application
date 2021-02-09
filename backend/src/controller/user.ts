@@ -10,7 +10,7 @@ router.post('/login', async (req, res) => {
     const user = await userService.createUser(req.body);
     return res.status(201).send(user);
   } catch (e) {
-    return res.status(400).send(e);
+    return res.status(400).send('Bad request!');
   }
 });
 
@@ -19,9 +19,9 @@ router.post('/login', async (req, res) => {
 router.post('/emailcheck', async (req, res, next) => {
   try {
     const user = await userService.checkUserByEmail(req.body);
-    return res.send(user);
+    return res.status(201).send(user);
   } catch (e) {
-    next(e);
+    return res.status(400).send('Bad request!');
   }
 });
 
