@@ -16,10 +16,10 @@ router.post('/login', async (req, res) => {
 
 // User info
 
-router.post('/emailcheck', async (req, res, next) => {
+router.post('/emailcheck', async (req, res) => {
   try {
     const user = await userService.checkUserByEmail(req.body);
-    return res.status(201).send(user);
+    return res.status(200).send(user);
   } catch (e) {
     return res.status(400).send('Bad request!');
   }

@@ -1,7 +1,7 @@
 import { Document, Types } from 'mongoose';
 
 export namespace DTO {
-  export type ID = Types.ObjectId;
+  export type Id = Types.ObjectId;
   export interface IUser {
     name: string;
     photoUrl: string;
@@ -17,23 +17,23 @@ export namespace DTO {
     title: string;
     description: string;
     priority: taskPriorities;
-    statusId: ID;
-    assigneeId: ID;
+    statusId: Id;
+    assigneeId: Id;
     createdAt: Date;
     updatedAt: Date;
-    boardId: ID;
+    boardId: Id;
   }
 
   export interface IStatus {
     title: string;
-    boardId: ID;
+    boardId: Id;
   }
 
   export interface IBoard {
     title: string;
     createdAt: Date;
     updatedAt: Date;
-    creatorId: ID;
+    creatorId: Id;
   }
 
   export interface IUserDoc extends IUser, Document {}
