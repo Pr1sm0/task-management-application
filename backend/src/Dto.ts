@@ -6,7 +6,6 @@ export namespace DTO {
     name: string;
     photoUrl: string;
     email: string;
-    role: string;
   }
 
   export interface IEmail {
@@ -16,7 +15,7 @@ export namespace DTO {
   export interface ITask {
     title: string;
     description: string;
-    priority: taskPriorities;
+    priority: TaskPriorities;
     statusId: Id;
     assigneeId: Id;
     createdAt: Date;
@@ -30,9 +29,18 @@ export namespace DTO {
   }
 
   export interface IBoard {
-    title: string;
+    projectId: Id;
+  }
+
+  export interface IMember {
+    email: string;
+    role: Roles;
+  }
+
+  export interface IProject {
+    name: string;
+    members: IMember[]
     createdAt: Date;
-    updatedAt: Date;
     creatorId: Id;
   }
 
@@ -40,13 +48,21 @@ export namespace DTO {
   export interface ITaskDoc extends ITask, Document {}
   export interface IStatusDoc extends IStatus, Document {}
   export interface IBoardDoc extends IBoard, Document {}
+  export interface IProjectDoc extends IProject, Document {}
 
-  export enum taskPriorities {
-    HIGHEST = 'HIGHEST',
-    HIGH = 'HIGH',
-    MEDIUM = 'MEDIUM',
-    LOW = 'LOW',
-    LOWEST = 'LOWEST',
+  export enum TaskPriorities {
+    Highest = 'HIGHEST',
+    High = 'HIGH',
+    Medium = 'MEDIUM',
+    Low = 'LOW',
+    Lowest = 'LOWEST',
+  }
+
+  export enum Roles {
+    User = 'USER',
+    Pm = 'PM',
+    Dev = 'DEV',
+    Admin = 'ADMIN',
   }
 }
 

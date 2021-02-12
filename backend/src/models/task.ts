@@ -8,7 +8,7 @@ const taskSchemaFields: Record<keyof DTO.ITask, any> = {
   },
   description: String,
   priority: {
-    type: DTO.taskPriorities,
+    type: DTO.TaskPriorities,
     required: true,
   },
   statusId: { 

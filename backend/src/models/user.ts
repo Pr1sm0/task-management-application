@@ -13,7 +13,6 @@ const userSchemaFields: Record<keyof DTO.IUser, any> = {
     required: true,
     unique: true
   },
-  role: String
 };
 
 const userSchema = new Schema(userSchemaFields);
