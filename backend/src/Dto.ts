@@ -15,7 +15,7 @@ export namespace DTO {
   export interface ITask {
     title: string;
     description: string;
-    priority: taskPriorities;
+    priority: TaskPriorities;
     statusId: Id;
     assigneeId: Id;
     createdAt: Date;
@@ -34,7 +34,7 @@ export namespace DTO {
 
   export interface IMember {
     email: string;
-    role: roles;
+    role: Roles;
   }
 
   export interface IProject {
@@ -50,19 +50,19 @@ export namespace DTO {
   export interface IBoardDoc extends IBoard, Document {}
   export interface IProjectDoc extends IProject, Document {}
 
-  export enum taskPriorities {
-    HIGHEST = 'HIGHEST',
-    HIGH = 'HIGH',
-    MEDIUM = 'MEDIUM',
-    LOW = 'LOW',
-    LOWEST = 'LOWEST',
+  export enum TaskPriorities {
+    Highest = 'HIGHEST',
+    High = 'HIGH',
+    Medium = 'MEDIUM',
+    Low = 'LOW',
+    Lowest = 'LOWEST',
   }
 
-  export enum roles {
-    USER = 'USER',
-    PM = 'PM',
-    DEV = 'DEV',
-    ADMIN = 'ADMIN',
+  export enum Roles {
+    User = 'USER',
+    Pm = 'PM',
+    Dev = 'DEV',
+    Admin = 'ADMIN',
   }
 }
 

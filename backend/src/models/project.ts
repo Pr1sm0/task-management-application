@@ -9,7 +9,7 @@ const projectSchemaFields: Record<keyof DTO.IProject, any> = {
   members: [
     {
       email: { type: String, required: true },
-      role: { type: DTO.roles, required: true }
+      role: { type: DTO.Roles, required: true }
     }
   ],
   createdAt: { 
