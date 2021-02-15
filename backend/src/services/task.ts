@@ -1,4 +1,4 @@
-import { TaskRepository, taskRepository } from '../repository/task';
+import { TaskRepository, taskRepository } from '../repositories/task';
 import { DTO } from '../Dto';
 
 class TaskService {

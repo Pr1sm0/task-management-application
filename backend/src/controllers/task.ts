@@ -1,6 +1,6 @@
 import express from 'express';
 import { Types } from 'mongoose';
-import { taskService } from '../service/task';
+import { taskService } from '../services/task';
 
 const router = express.Router();
 
