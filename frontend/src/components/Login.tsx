@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../images/tma.png';
-import Button from '../images/google-login.png';
+import GoogleLogo from '../images/google_logo.svg';
 import { useHistory } from 'react-router-dom';
 import { googleSignin, googleSignout } from '../services/firebaseService';
 import './login.scss';
@@ -24,8 +24,13 @@ const Login: React.FC = () => {
         <img src={Logo} alt="logo" className="logo" />
         <h1 className="project-name">TMA</h1>
         <h2 className="moto">Your faithfull task manager</h2>
-        <input type="image" src={Button} onClick={handleGoogleResponseForSignIn} alt=""/>
-        <button onClick={handleGoogleResponseForSignOut}>Google Signout</button>
+        <button className="login-btn" onClick={handleGoogleResponseForSignIn}>
+          <div className="google-logo-container">
+            <img src={GoogleLogo} alt="google-logo" />
+          </div>
+          <p className="login-btn-link">Sign in with Google</p>
+        </button>
+        <button className="logout-btn" onClick={handleGoogleResponseForSignOut}>Google SignOut</button>
       </div>
     </div>
   );
