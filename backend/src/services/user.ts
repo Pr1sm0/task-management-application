@@ -13,6 +13,11 @@ class UserService {
     const data = await this.userRepo.checkUserByEmail(email);
     return data;
   }
+
+  async getUserInfoById(userId: DTO.Id): Promise<DTO.IUser | null> {
+    const data = await this.userRepo.getUserInfoById(userId);
+    return data;
+  }
 }
 
 export const userService = new UserService(userRepository);

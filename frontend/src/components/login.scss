@@ -1,3 +1,8 @@
+$white: #fff;
+$google-blue: #4285f4;
+$button-active-blue: #1669F2;
+$primary-color: #94BBF5;
+
 .login-wrapper {
   display: flex;
   flex-direction: column;
@@ -8,7 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 6px solid #94BBF5;
+    border: 6px solid $primary-color;
     border-radius: 4px;
     height: 420px;
     width: 420px;
@@ -32,7 +37,8 @@
   .login-btn {
     display: flex;
     align-items: center;
-    background-color: #4285f4;
+    background-color: $google-blue;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
     border-radius: 4px;
     width: 220px;
     border: none;
@@ -41,18 +47,23 @@
     
     &:hover {
       cursor: pointer;
-      box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+      box-shadow: 0 0 6px $google-blue;
+    }
+
+    &:active {
+      background: $button-active-blue;
     }
 
     &-link {
       margin: 0;
-      color: white;
+      color: $white;
       font-size: 16px;
+      font-family: 'Roboto', sans-serif;
     }
   }
 
   .google-logo-container {
-    background-color: white;
+    background-color: $white;
     height: 24px;
     width: 24px;
     border-radius: 4px;

@@ -14,6 +14,11 @@ export class UserRepository {
     const data = await User.findOne({ email: newEmail });
     return data;
   }
+
+  async getUserInfoById(userId: DTO.Id): Promise<DTO.IUserDoc | null> {
+    const data = await User.findById(userId);
+    return data;
+  }
 }
 
 export const userRepository = new UserRepository();
