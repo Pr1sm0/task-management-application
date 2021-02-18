@@ -33,7 +33,7 @@ export namespace DTO {
   }
 
   export interface IMember {
-    email: string;
+    userId: Id;
     role: Roles;
   }
 

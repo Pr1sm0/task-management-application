@@ -1,0 +1,77 @@
+$white: #fff;
+$google-blue: #4285f4;
+$button-active-blue: #1669F2;
+$primary-color: #94BBF5;
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+
+  .border-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 6px solid $primary-color;
+    border-radius: 4px;
+    height: 420px;
+    width: 420px;
+  }
+
+  .logo {
+    margin-top: 64px;
+    width: 128px;
+  }
+
+  .project-name {
+    margin: 8px 0;
+  }
+
+  .moto {
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-weight: normal;
+  }
+
+  .login-btn {
+    display: flex;
+    align-items: center;
+    background-color: $google-blue;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+    border-radius: 4px;
+    width: 220px;
+    border: none;
+    padding: 0;
+    outline: none;
+    
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 6px $google-blue;
+    }
+
+    &:active {
+      background: $button-active-blue;
+    }
+
+    &-link {
+      margin: 0;
+      color: $white;
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+
+  .google-logo {
+    background: white;
+    padding:10px;
+    border-radius:4px;
+    height: 16px;
+    width: 16px;
+    margin: 1px 24px 1px 1px;
+  }
+
+  .logout-btn {
+    display: none;
+  }
+}

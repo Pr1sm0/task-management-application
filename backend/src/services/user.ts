@@ -1,4 +1,4 @@
-import { UserRepository, userRepository } from '../repository/user';
+import { UserRepository, userRepository } from '../repositories/user';
 import { DTO } from '../Dto';
 
 class UserService {
@@ -11,6 +11,11 @@ class UserService {
 
   async checkUserByEmail(email: DTO.IEmail): Promise<DTO.IUser | null> {
     const data = await this.userRepo.checkUserByEmail(email);
+    return data;
+  }
+
+  async getUserInfoById(userId: DTO.Id): Promise<DTO.IUser | null> {
+    const data = await this.userRepo.getUserInfoById(userId);
     return data;
   }
 }
