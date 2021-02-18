@@ -24,12 +24,10 @@ const Login: React.FC = () => {
         <img src={Logo} alt="logo" className="logo" />
         <h1 className="project-name">TMA</h1>
         <h2 className="moto">Your faithfull task manager</h2>
-        <div className="login-btn" onClick={handleGoogleResponseForSignIn}>
-          <div className="google-logo-container">
-            <img src={GoogleLogo} alt="google-logo" />
-          </div>
-          <p className="login-btn-link">Sign in with Google</p>
-        </div>
+        <button className="login-btn" onClick={handleGoogleResponseForSignIn}>
+          <img src={GoogleLogo} alt="google-logo" className="google-logo"/>
+          <span className="login-btn-link">Sign in with Google</span>
+        </button>
         <button className="logout-btn" onClick={handleGoogleResponseForSignOut}>Google SignOut</button>
       </div>
     </div>

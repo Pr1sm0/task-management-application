@@ -62,19 +62,13 @@ $primary-color: #94BBF5;
     }
   }
 
-  .google-logo-container {
-    background-color: $white;
-    height: 36px;
-    width: 36px;
-    border-radius: 4px;
-    padding: 2px;
+  .google-logo {
+    background: white;
+    padding:10px;
+    border-radius:4px;
+    height: 16px;
+    width: 16px;
     margin: 1px 24px 1px 1px;
-    
-    img {
-      height: 16px;
-      width: 16px;
-      margin: 10px;
-    }
   }
 
   .logout-btn {
