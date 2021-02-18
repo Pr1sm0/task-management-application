@@ -64,15 +64,16 @@ $primary-color: #94BBF5;
 
   .google-logo-container {
     background-color: $white;
-    height: 24px;
-    width: 24px;
+    height: 36px;
+    width: 36px;
     border-radius: 4px;
     padding: 2px;
-    margin: 8px 24px 8px 10px;
+    margin: 1px 24px 1px 1px;
     
     img {
-      height: 24px;
-      width: 24px;
+      height: 16px;
+      width: 16px;
+      margin: 10px;
     }
   }
 
