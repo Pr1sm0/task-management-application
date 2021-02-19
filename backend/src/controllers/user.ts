@@ -17,7 +17,7 @@ router.post('/login', async (req, res) => {
 
 // User info
 
-router.get('/emailcheck', async (req, res) => {
+router.post('/emailcheck', async (req, res) => {
   try {
     const user = await userService.checkUserByEmail(req.body);
     return res.status(200).send(user);

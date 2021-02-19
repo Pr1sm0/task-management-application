@@ -1,0 +1,142 @@
+@import '../variables.scss';
+
+header {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 72px;
+  background-color: $primary-color;
+
+  .project-info {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+    margin-left: 48px;
+    padding: 0 14px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $dark-blue;
+      border-radius: 4px;
+    }
+
+    &:active {
+      background-color: $google-blue;
+    }
+
+    .logo {
+      height: 44px;
+    }
+
+    p {
+      margin-left: 8px;
+      font-size: 24px;
+      color: $black;
+      font-weight: bold;
+    }
+  }
+
+  .projects-dropdown {
+    display: flex;
+    align-items: center;
+    padding: 0 6px 0 14px;
+    margin-left: 78px;
+    height: 100%;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $dark-blue;
+      border-radius: 4px;
+    }
+
+    &:active {
+      background-color: $google-blue;
+    }
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 48px;
+    padding: 0 8px;
+    width: 134px;
+    height: 100%;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $dark-blue;
+      border-radius: 4px;
+    }
+
+    &:active {
+      background-color: $google-blue;
+    }
+
+    img {
+      height: 44px;
+      border-radius: 50%;
+      margin-left: 16px;
+    }
+  }
+
+  .dropdown-list {
+    display: block;
+    position: absolute;
+    width: 200px;
+    top: 64px;
+    left: 260px;
+    background-color: $white;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.25);
+    
+    a {
+      display: flex;
+      color: $black;
+      padding: 8px;
+      text-decoration: none;
+      border-bottom: 1px solid $ligth-grey;
+
+      &:hover {
+        background-color: $ligth-grey;
+        border-radius: 4px;
+      }
+
+      &:active {
+        background-color: $grey;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .dropdown-logout {
+    position: absolute;
+    width: 150px;
+    top: 64px;
+    right: 48px;
+    background-color: $white;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.25);
+    
+    a {
+      display: flex;
+      color: $black;
+      padding: 8px;
+      text-decoration: none;
+      border-bottom: 1px solid $ligth-grey;
+
+      &:hover {
+        background-color: $ligth-grey;
+        border-radius: 4px;
+      }
+
+      &:active {
+        background-color: $grey;
+        border-radius: 4px;
+      }
+    }
+  }
+}

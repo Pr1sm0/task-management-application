@@ -1,7 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import { postRequest } from '../services/apiService';
-import { saveUserToStorage } from '../services/sessionStorageService';
+import { saveUserToStorage } from './localStorageService';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCWAAOKW9mMzFJZRAN1rz8i6K0h0kjN8ME',
@@ -21,7 +21,7 @@ if (!firebase.apps.length) {
 var provider = new firebase.auth.GoogleAuthProvider();
 
 export function googleSignin() {
-  firebase
+  return firebase
     .auth()
     .signInWithPopup(provider)
     .then(async res => {
@@ -46,7 +46,7 @@ export function googleSignin() {
 }
 
 export function googleSignout() {
-  firebase
+  return firebase
     .auth()
     .signOut()
     .then(

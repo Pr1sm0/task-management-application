@@ -1,11 +1,11 @@
 import { IUser } from '../interfaces';
 
 export const saveUserToStorage = (user: IUser) => {
-  sessionStorage.setItem('loginedUser', JSON.stringify(user));
+  localStorage.setItem('loginedUser', JSON.stringify(user));
 };
 
 export const getUserFromStorage = () => {
-  return JSON.parse(sessionStorage.getItem('loginedUser') as string);
+  return JSON.parse(localStorage.getItem('loginedUser') as string);
 };
 
 export const isCurrentUser = (id?: string) => {
@@ -14,5 +14,5 @@ export const isCurrentUser = (id?: string) => {
 };
 
 export const clearStorage = () => {
-  sessionStorage.clear();
+  localStorage.clear();
 };

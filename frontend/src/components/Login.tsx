@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../images/tma.png';
 import GoogleLogo from '../images/google_logo.svg';
 import { useHistory } from 'react-router-dom';
-import { googleSignin, googleSignout } from '../services/firebaseService';
+import { googleSignin } from '../services/firebaseService';
 import './login.scss';
 
 const Login: React.FC = () => {
@@ -10,12 +10,7 @@ const Login: React.FC = () => {
 
   const handleGoogleResponseForSignIn = async () => {
     await googleSignin();
-    history.push(`/`);
-  };
-
-  const handleGoogleResponseForSignOut = async () => {
-    await googleSignout();
-    history.push(`/`);
+    history.push(`/projects`);
   };
 
   return (
@@ -28,7 +23,6 @@ const Login: React.FC = () => {
           <img src={GoogleLogo} alt="google-logo" className="google-logo"/>
           <span className="login-btn-link">Sign in with Google</span>
         </button>
-        <button className="logout-btn" onClick={handleGoogleResponseForSignOut}>Google SignOut</button>
       </div>
     </div>
   );
