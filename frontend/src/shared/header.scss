@@ -12,10 +12,11 @@ header {
   .project-info {
     display: flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     height: 100%;
+    width: 140px;
     margin-left: 48px;
-    padding: 0 14px;
 
     &:hover {
       cursor: pointer;
@@ -36,15 +37,17 @@ header {
       font-size: 24px;
       color: $black;
       font-weight: bold;
+      font-family: 'Roboto', sans-serif;
     }
   }
 
   .projects-dropdown {
     display: flex;
     align-items: center;
-    padding: 0 6px 0 14px;
+    justify-content: center;
     margin-left: 78px;
     height: 100%;
+    width: 110px;
 
     &:hover {
       cursor: pointer;
@@ -52,18 +55,65 @@ header {
       border-radius: 4px;
     }
 
-    &:active {
-      background-color: $google-blue;
+    button {
+      border: none;
+      background-color: transparent;
+      outline: none;
+      display: inherit;
+      align-items: inherit;
+      justify-content: inherit;
+      height: inherit;
+      width: inherit;
+      padding: 0 0 0 8px;
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $dark-blue;
+        border-radius: 4px;
+      }
+
+      &:active {
+        background-color: $google-blue;
+      }
+    }
+
+    .dropdown-list {
+      position: absolute;
+      width: 200px;
+      top: 64px;
+      margin-left: 90px;
+      background-color: $white;
+      border-radius: 4px;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+
+      a {
+        display: flex;
+        color: $black;
+        padding: 8px;
+        text-decoration: none;
+        border-bottom: 1px solid $ligth-grey;
+
+        &:hover {
+          background-color: $ligth-grey;
+          border-radius: 4px;
+        }
+
+        &:active {
+          background-color: $grey;
+          border-radius: 4px;
+        }
+      }
     }
   }
 
   .user-info {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-left: auto;
     margin-right: 48px;
-    padding: 0 8px;
-    width: 134px;
     height: 100%;
 
     &:hover {
@@ -72,70 +122,63 @@ header {
       border-radius: 4px;
     }
 
-    &:active {
-      background-color: $google-blue;
-    }
-
-    img {
-      height: 44px;
-      border-radius: 50%;
-      margin-left: 16px;
-    }
-  }
-
-  .dropdown-list {
-    display: block;
-    position: absolute;
-    width: 200px;
-    top: 64px;
-    left: 260px;
-    background-color: $white;
-    border-radius: 4px;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.25);
-    
-    a {
-      display: flex;
-      color: $black;
-      padding: 8px;
-      text-decoration: none;
-      border-bottom: 1px solid $ligth-grey;
+    button {
+      border: none;
+      background-color: transparent;
+      outline: none;
+      display: inherit;
+      align-items: inherit;
+      justify-content: inherit;
+      height: inherit;
+      padding: 0 16px;
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
 
       &:hover {
-        background-color: $ligth-grey;
+        cursor: pointer;
+        background-color: $dark-blue;
         border-radius: 4px;
       }
 
       &:active {
-        background-color: $grey;
-        border-radius: 4px;
+        background-color: $google-blue;
+      }
+
+      img {
+        height: 44px;
+        border-radius: 50%;
+        margin-left: 16px;
       }
     }
-  }
 
-  .dropdown-logout {
-    position: absolute;
-    width: 150px;
-    top: 64px;
-    right: 48px;
-    background-color: $white;
-    border-radius: 4px;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.25);
-    
-    a {
-      display: flex;
-      color: $black;
-      padding: 8px;
-      text-decoration: none;
-      border-bottom: 1px solid $ligth-grey;
+    .dropdown-logout {
+      position: absolute;
+      width: 120px;
+      top: 64px;
+      background-color: $white;
+      border-radius: 4px;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
 
-      &:hover {
-        background-color: $ligth-grey;
-        border-radius: 4px;
-      }
+      a {
+        display: flex;
+        color: $black;
+        padding: 8px;
+        text-decoration: none;
+        border-bottom: 1px solid $ligth-grey;
 
-      &:active {
-        background-color: $grey;
-        border-radius: 4px;
+        &:hover {
+          background-color: $ligth-grey;
+          border-radius: 4px;
+        }
+
+        &:active {
+          background-color: $grey;
+          border-radius: 4px;
+        }
+
+        img {
+          margin-right: 8px;
+        }
       }
     }
   }

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Logo from '../images/tma.png';
 import Arrow from '../images/arrow-drop-down-fill.svg';
+import Logout from '../images/logout-box-line.svg';
 import { Link, useHistory } from 'react-router-dom';
 import { IUser } from '../interfaces';
 import { clearStorage, getUserFromStorage } from '../services/localStorageService';
@@ -76,8 +77,10 @@ const Header: React.FC = () => {
         <img src={Logo} alt="logo" className="logo" />
         <p>TMA</p>
       </Link>
-      <div className="projects-dropdown" onClick={e => setOpenProjects(!openProjects)} ref={projectsNode}>
-        <p>Projects</p> <img src={Arrow} alt="Arrow" />
+      <div className="projects-dropdown" ref={projectsNode}>
+        <button onClick={e => setOpenProjects(!openProjects)}>
+          Projects <img src={Arrow} alt="Arrow icon" />
+        </button>
         {openProjects && (
           <div className="dropdown-list">
             <Link to="/projects">View all projects</Link>
@@ -85,11 +88,15 @@ const Header: React.FC = () => {
           </div>
         )}
       </div>
-      <div className="user-info" onClick={e => setOpenLogout(!openLogout)} ref={logoutNode}>
-        <p>{user?.name}</p> <img src={user?.photoUrl} alt="User avatar" className="avatar" />
+      <div className="user-info" ref={logoutNode}>
+        <button onClick={e => setOpenLogout(!openLogout)}>
+          {user?.name} <img src={user?.photoUrl} alt="User avatar" className="avatar" />
+        </button>
         {openLogout && (
           <div className="dropdown-logout">
-            <Link to="/" onClick={handleGoogleResponseForSignOut}>Log Out</Link>
+            <Link to="/" onClick={handleGoogleResponseForSignOut}>
+              <img src={Logout} alt="Logout icon"/> Log Out
+            </Link>
           </div>
         )}
       </div>
