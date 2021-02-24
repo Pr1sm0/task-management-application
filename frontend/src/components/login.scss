@@ -1,7 +1,4 @@
-$white: #fff;
-$google-blue: #4285f4;
-$button-active-blue: #1669F2;
-$primary-color: #94BBF5;
+@import '../variables.scss';
 
 .login-wrapper {
   display: flex;
@@ -26,12 +23,14 @@ $primary-color: #94BBF5;
 
   .project-name {
     margin: 8px 0;
+    font-family: 'Roboto', sans-serif;
   }
 
   .moto {
     margin-top: 0;
     margin-bottom: 32px;
     font-weight: normal;
+    font-family: 'Roboto', sans-serif;
   }
 
   .login-btn {
@@ -51,7 +50,7 @@ $primary-color: #94BBF5;
     }
 
     &:active {
-      background: $button-active-blue;
+      background-color: $button-active-blue;
     }
 
     &-link {
