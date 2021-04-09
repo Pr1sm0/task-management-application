@@ -90,10 +90,12 @@ header {
 
       a {
         display: flex;
+        align-items: center;
         color: $black;
-        padding: 8px;
+        padding: 16px;
         text-decoration: none;
         border-bottom: 1px solid $ligth-grey;
+        font-family: 'Roboto', sans-serif;
 
         &:hover {
           background-color: $ligth-grey;
@@ -161,10 +163,12 @@ header {
 
       a {
         display: flex;
+        align-items: center;
         color: $black;
         padding: 8px;
         text-decoration: none;
         border-bottom: 1px solid $ligth-grey;
+        font-family: 'Roboto', sans-serif;
 
         &:hover {
           background-color: $ligth-grey;

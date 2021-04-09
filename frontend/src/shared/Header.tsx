@@ -90,7 +90,7 @@ const Header: React.FC = () => {
       </div>
       <div className="user-info" ref={logoutNode}>
         <button onClick={e => setOpenLogout(!openLogout)}>
-          {user?.name} <img src={user?.photoUrl} alt="User avatar" className="avatar" />
+          {user?.name} <img src={user?.photoUrl} alt="User avatar" className="avatar" referrerPolicy="no-referrer" />
         </button>
         {openLogout && (
           <div className="dropdown-logout">

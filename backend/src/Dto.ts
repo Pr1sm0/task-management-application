@@ -41,7 +41,7 @@ export namespace DTO {
     name: string;
     members: IMember[]
     createdAt: Date;
-    creatorId: Id;
+    creator: IUser;
   }
 
   export interface IUserDoc extends IUser, Document {}

@@ -20,8 +20,8 @@ const projectSchemaFields: Record<keyof DTO.IProject, any> = {
     type: Date, 
     default: Date.now 
   },
-  creatorId: { 
-    type: Schema.Types.ObjectId, 
+  creator: { 
+    type: Object, 
     ref: 'User',
     required: true 
   },
